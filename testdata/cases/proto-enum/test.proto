@@ -47,6 +47,7 @@ enum MapToString {
 enum MapToCustom {
   option (pubg.jsonschema.enum) = {mapping_type: MapToCustom};
 
+  // NOTE: string value must encapsulated in escaped string
   FOOMapToCustom0 = 0 [(pubg.jsonschema.enum_value) = {custom_value: {value:"\"foo\""}}];
   FOOMapToCustom1 = 1 [(pubg.jsonschema.enum_value) = {custom_value: {value:"123"}}];
 }
